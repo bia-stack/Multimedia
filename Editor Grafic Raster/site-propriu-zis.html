@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Grafic Raster</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="javas.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!--Toolbar-->
+        <div class="toolbar">
+            <div class="group">
+                <h3>Instrumente</h3>
+                <button id="buton-ellipse" class="buton-tool active" data-tool="ellipse">Elipsă</button>
+                <button id="buton-rect" class="buton-tool" data-tool="rectangle">Dreptunghi</button>
+                <button id="buton-line" class="buton-tool" data-tool="line">Linie</button>
+            </div>
+
+            <div class="group">
+                <h3>Stil</h3>
+                <label>
+                    Culoare Linie:
+                    <input type="color" id="color-stroke" value="#000000">
+                </label>
+                <label>
+                    Grosime:
+                    <input type="number" id="line-width" value="2" min="1" max="50">
+                </label>
+                <label>
+                    Fundal:
+                    <input type="color" id="bg-color" value="#ffffff">
+                </label>
+            </div>
+
+            <div class="group">
+                <h3>Export</h3>
+                <button id="buton-export-raster">Salvează PNG</button>
+                <button id="buton-export-svg">Salvează SVG</button>
+            </div>
+        </div>
+
+        <!-- Zona de desen canvas-->
+        <div class="canvas-container">
+            <canvas id="drawing-canvas" width="800" height="600"></canvas>
+        </div>
+
+        <!-- lista de figuri-->
+        <div class="sidebar">
+            <h3>Figuri</h3>
+            <div id="shapes-list" class="shapes-list">
+                <!-- aici vor aparea figurile-->
+            </div>
+
+            <div id="properties-panel" class="properties-panel hidden">
+                <h3>Proprietăți</h3>
+                <label>X: <input type="number" id="prop-x"></label>
+                <label>Y: <input type="number" id="prop-y"></label>
+                <label>Lățime/X2: <input type="number" id="prop-w"></label>
+                <label>Înălțime/Y2: <input type="number" id="prop-h"></label>
+                <label>Culoare: <input type="color" id="prop-color"></label>
+                <label>Grosime: <input type="number" id="prop-width"></label>
+                <button id="buton-delete-shape" class="buton-danger">Șterge figura</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
