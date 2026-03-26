@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Telefonica</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="functii.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div class="antet">
+            <h1 id="titlu">Telephone Agenda</h1>
+            <button id="schimbaTema" class="btn">Mod Întunecat</button>
+        </div>
+
+        <div id="form1">
+            <h2 class="subtitlu">Person List</h2>
+            <form id="forma1" class="formular">
+                <div class="form">
+                    <label for="last-name" class="eticheta">Last Name:</label>
+                    <input type="text" id="last-name" class="input" required>
+                </div>
+                <div class="form">
+                    <label for="first-name" class="eticheta">First Name:</label>
+                    <input type="text" id="first-name" class="input" required>
+                </div>
+                <div class="form">
+                    <label for="phone-number" class="eticheta">Phone Number:</label>
+                    <input type="tel" id="phone-number" class="input" required>
+                </div>
+                <button type="submit" id="addPersonBTN" class="adauga">Add Person</button>
+            </form>
+        </div>
+
+        <div id="table">
+            <div id="animation" class="loading"></div>
+            <table id="table1" class="tabel">
+                <thead>
+                    <tr class="rand">
+                        <th class="cell">Last Name</th>
+                        <th class="cell">First Name</th>
+                        <th class="cell">Phone Number</th>
+                        <th class="cell">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+                <tfoot>
+                    <tr class="footer">
+                        <td colspan="4" id="count" class="celula-footer">
+                            Number of persons: <span id="total" class="numar-persoane">0</span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
